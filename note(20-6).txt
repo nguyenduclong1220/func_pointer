@@ -1,0 +1,18 @@
+C2: Stack - LIFO 
+địa chỉ luôn là số chẵn 
+giá trị có nghĩa $SP-1
+khi dùng stack, không cần quan tâm thứ tự các biến 
+lưu biến trên stack 
+
+GDB: Compile '-g'
+
+gcc -g <> -o <>
+
+C4:
+Trong stack, con trỏ đc khai báo sau cùng. 
+
+
+Khi debug, tránh việc debug địa chỉ vì con trỏ, địa chỉ, offset,... thay đổi
+lệnh demesg tìm đc coredump ở đâu 
+
+Mai: linux start up 
