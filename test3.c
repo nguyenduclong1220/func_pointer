@@ -6,7 +6,7 @@ struct _command {
 	struct _command *next;
 };
 
-struct _command * initCammandList();
+struct _command * initCommandList();
 void insertCommand(command * list, int *(callback)(int));
 
 int main () {
