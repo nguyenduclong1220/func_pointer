@@ -4,14 +4,22 @@ struct _command {
 	int (*callback)(int); // A command will excecute a callback function
 	struct _command* next;
 };
-typedef struct _command command;
-struct _command* initCommandList() ;
-command* lastCommand;
+
+struct _command* initCommandList() {
+	struct _command* _head = malloc(sizeof(struct _command*));
+	_head -> callback = NULL;
+	_head -> next = NULL;
+	return _head;
+};
+
 command* orderOfFunctions;
-int A;
-void insertCommand(command** list , int (*callback)(int))
+
+void insertCommand(struct _command* list , int (*callback)(int))
 {
-	int i;
+	if (list == NULL) {
+		return;
+	}
+	
 	command* func = (command*)malloc(sizeof(command));
 	func->next = NULL;
 	func->callback = callback;
